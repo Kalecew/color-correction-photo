@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(#ad5389, #3c1053);
+}
+ul{
+  list-style: none;
+}
+.app{
+  display: flex;
+}
+.box{
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.box.image{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box.image img{
+  max-width: 100%;
+  max-height: 80vh;
+  margin-bottom: 20px;
+  /*object-fit: contain;*/
+}
+.box.settings{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 200px;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+}
+.slider-wrap{
+  width: 100%;
+}
+.slider-wrap input{
+  width: 100%;
+}
+input.img-url{
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: inherit;
+  font-family: inherit;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.buttons button{
+  width: 100%;
+  padding: 15px 30px;
+  font-weight: normal;
+  font-family: Roboto, sans-serif;
+  font-size: inherit;
+  font-family: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fad64e;
+  color: #3f3f3f;
+  border: none;
+  border-radius: 50px;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+.buttons button:disabled{
+  background: #ccc;
+  cursor: not-allowed;
+}
+.buttons button:active{
+  transform: none;
+  box-shadow: none;
+}
+.buttons button:hover:not(:disabled){
+  box-shadow: 0 3px 3px rgba(0,0,0,.2);
+  transform: translateY(-1px);
+}
