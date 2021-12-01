@@ -7,7 +7,7 @@
 body {
   font-family: Roboto, sans-serif;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -16,41 +16,31 @@ body {
 ul{
   list-style: none;
 }
-.app{
+
+.color-correction-photo{
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
-.box{
+.color-correction-photo .box{
   background: #fff;
   padding: 20px;
   border-radius: 10px;
+  flex-grow: 1;
 }
-.box.image{
+.color-correction-photo .box.image{
   width: 400px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.box.image img{
+.color-correction-photo .box.image img{
   max-width: 100%;
   max-height: 80vh;
   margin-bottom: 20px;
-  /*object-fit: contain;*/
 }
-.box.settings{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-  width: 200px;
-  box-shadow: 0 0px 10px rgba(0,0,0,0.1);
-}
-.slider-wrap{
-  width: 100%;
-}
-.slider-wrap input{
-  width: 100%;
-}
-input.img-url{
+.color-correction-photo input.img-url{
   display: block;
   width: 100%;
   padding: 10px 15px;
@@ -59,12 +49,29 @@ input.img-url{
   border: 1px solid #999;
   border-radius: 5px;
 }
-.buttons{
+.color-correction-photo .box.settings{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 200px;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+}
+.color-correction-photo .slider-wrap{
+  width: 100%;
+}
+.color-correction-photo .slider-wrap label{
+  user-select: none;
+}
+.color-correction-photo .slider-wrap input{
+  width: 100%;
+}
+.color-correction-photo .buttons{
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.buttons button{
+.color-correction-photo .buttons button{
   width: 100%;
   padding: 15px 30px;
   font-weight: normal;
@@ -79,15 +86,15 @@ input.img-url{
   border-radius: 50px;
   transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
 }
-.buttons button:disabled{
+.color-correction-photo .buttons button:disabled{
   background: #ccc;
   cursor: not-allowed;
 }
-.buttons button:active{
+.color-correction-photo .buttons button:active{
   transform: none;
   box-shadow: none;
 }
-.buttons button:hover:not(:disabled){
+.color-correction-photo .buttons button:hover:not(:disabled){
   box-shadow: 0 3px 3px rgba(0,0,0,.2);
   transform: translateY(-1px);
 }

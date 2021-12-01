@@ -4,54 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <title>Color correction photo</title>
 </head>
 <body>
-  <div class="app">
+  <div class="color-correction-photo">
     <div class="box image">
-      <!-- <img src="https://i.pinimg.com/474x/3f/0b/d9/3f0bd9903b9897f7fd8193cd37b16b2c.jpg"> -->
-      <img src="https://pbs.twimg.com/media/E6yswMSVkAc6wA5.jpg">
-      <!-- <img src="https://gde.ru/images/img_ru/124x124/563016.jpg"> -->
+      <!-- <img id="color-correction-photo-image" src="https://i.pinimg.com/474x/3f/0b/d9/3f0bd9903b9897f7fd8193cd37b16b2c.jpg"> -->
+      <img id="color-correction-photo-image" src="https://pbs.twimg.com/media/E6yswMSVkAc6wA5.jpg">
+      <!-- <img id="color-correction-photo-image" src="https://gde.ru/images/img_ru/124x124/563016.jpg"> -->
       <input
-        id="img-url" 
+        id="color-correction-photo-img-url" 
         class="img-url"
         type="text"
         placeholder="Введите URL картинки"
-        value="https://i.pinimg.com/474x/3f/0b/d9/3f0bd9903b9897f7fd8193cd37b16b2c.jpg"
+        value="https://pbs.twimg.com/media/E6yswMSVkAc6wA5.jpg"
       >
     </div>
     <div class="box settings">
       <ul class="sliders">
         <li class="slider-wrap">
           <label for="grayscale">Оттенки серого</label>
-          <input type="range" min="0" max="100" value="0" id="grayscale">
+          <input type="range" min="0" max="100" value="0" id="color-correction-photo-grayscale">
         </li>
 
         <li class="slider-wrap">
           <label for="contrast">Контраст</label>
-          <input type="range" min="50" max="200" value="100" id="contrast">
+          <input type="range" min="50" max="200" value="0" id="color-correction-photo-contrast">
         </li>
 
         <li class="slider-wrap">
           <label for="brightness">Яркость</label>
-          <input type="range" min="50" max="200" value="100" id="brightness">
+          <input type="range" min="50" max="200" value="0" id="color-correction-photo-brightness">
         </li>
 
         <li class="slider-wrap">
           <label for="sepia">Сепия</label>
-          <input type="range" min="0" max="100" value="0" id="sepia">
+          <input type="range" min="0" max="100" value="0" id="color-correction-photo-sepia">
         </li>
 
         <li class="slider-wrap">
           <label for="saturate">Насыщенность</label>
-          <input type="range" min="0" max="200" value="100" id="saturate">
+          <input type="range" min="0" max="200" value="0" id="color-correction-photo-saturate">
         </li>
       </ul>
       <div class="buttons">
-        <button id="reset" disabled>Сбросить</button>
+        <button id="color-correction-photo-reset">Сбросить</button>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
